@@ -1,6 +1,6 @@
 package tpc;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee> {
     static int genNum = 1;
     private int empNum;
     private String name;
@@ -48,4 +48,8 @@ public abstract class Employee {
     }
     
     public abstract double getFortnightPay();
+    
+    public int compareTo(Employee rhs) {
+        return this.getName().compareTo(rhs.getName());
+    }
 }
