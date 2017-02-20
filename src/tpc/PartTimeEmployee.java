@@ -41,4 +41,9 @@ public class PartTimeEmployee extends Employee{
     public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
+    
+    public double getFortnightPay() {
+        return getHourlyRate() * getHoursWorked();
+    }
+    
 }
